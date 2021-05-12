@@ -1,1 +1,129 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>React App</title><link href="/static/css/main.74a4bfa4.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>!function(e){function r(r){for(var n,a,i=r[0],c=r[1],l=r[2],s=0,p=[];s<i.length;s++)a=i[s],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&p.push(o[a][0]),o[a]=0;for(n in c)Object.prototype.hasOwnProperty.call(c,n)&&(e[n]=c[n]);for(f&&f(r);p.length;)p.shift()();return u.push.apply(u,l||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,i=1;i<t.length;i++){var c=t[i];0!==o[c]&&(n=!1)}n&&(u.splice(r--,1),e=a(a.s=t[0]))}return e}var n={},o={1:0},u=[];function a(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,a),t.l=!0,t.exports}a.e=function(e){var r=[],t=o[e];if(0!==t)if(t)r.push(t[2]);else{var n=new Promise((function(r,n){t=o[e]=[r,n]}));r.push(t[2]=n);var u,i=document.createElement("script");i.charset="utf-8",i.timeout=120,a.nc&&i.setAttribute("nonce",a.nc),i.src=function(e){return a.p+"static/js/"+({}[e]||e)+"."+{3:"329abe0c"}[e]+".chunk.js"}(e);var c=new Error;u=function(r){i.onerror=i.onload=null,clearTimeout(l);var t=o[e];if(0!==t){if(t){var n=r&&("load"===r.type?"missing":r.type),u=r&&r.target&&r.target.src;c.message="Loading chunk "+e+" failed.\n("+n+": "+u+")",c.name="ChunkLoadError",c.type=n,c.request=u,t[1](c)}o[e]=void 0}};var l=setTimeout((function(){u({type:"timeout",target:i})}),12e4);i.onerror=i.onload=u,document.head.appendChild(i)}return Promise.all(r)},a.m=e,a.c=n,a.d=function(e,r,t){a.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,r){if(1&r&&(e=a(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(a.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)a.d(t,n,function(r){return e[r]}.bind(null,n));return t},a.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(r,"a",r),r},a.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},a.p="/",a.oe=function(e){throw console.error(e),e};var i=this.webpackJsonpreadme=this.webpackJsonpreadme||[],c=i.push.bind(i);i.push=r,i=i.slice();for(var l=0;l<i.length;l++)r(i[l]);var f=c;t()}([])</script><script src="/static/js/2.4f24c6ab.chunk.js"></script><script src="/static/js/main.8380e4dc.chunk.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body{
+    background-color: #b53;
+  }
+  .box{
+
+
+    max-width: 15em;
+    min-height: 10em;
+  }
+  :root{
+    --r:1em
+  }
+  .box{
+    position: relative;
+    overflow: hidden;
+  }
+  .box::before{
+    content: '';
+        position: absolute;
+        top: 2em;
+        padding: var(--r);
+
+        background: transparent;
+        margin: calc(var(--r) * (-1));
+        box-shadow: 0 0 0 100vw red;
+        border-radius: 50%;
+        z-index: -1;
+
+  }
+
+</style>
+<body>
+  <div class="box">
+    <span>水电费</span>
+    <span></span>
+    <span>十多个</span>
+    <audio src="./释念成空、晏鸩 - 珊瑚海.mp3" autoplay ></audio>
+    都是广寒深宫
+  </div>
+
+  <script src="./d3.min.js"></script>
+  <style>
+.axis path,
+.axis line{
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges; 
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+
+  </style>
+  <script>
+    
+
+var dataset = [ 300 , 210 , 170 , 130 , 90 ];  //数据（表示矩形的宽度）
+var width = 300;  //画布的宽度
+var height = 300;   //画布的高度
+// 定义比例尺
+var linear=d3.scale.linear()
+    .domain([0,d3.max(dataset)])
+    .range([0,200])
+
+var svg = d3.select("body")     //选择文档中的body元素
+    .append("svg")          //添加一个svg元素
+    .attr("width", width)       //设定宽度
+    .attr("height", height);    //设定高度
+var rectHeight = 25;   //每个矩形所占的像素高度(包括空白)
+svg.selectAll("rect")
+    .data(dataset)//绑定数据
+    .enter()//补齐剩下的rect
+    .append("rect")
+    .attr("y",function(d,i){
+      return height-linear(d)
+    })
+    .attr("x",function(d,i){
+      console.log(d,i)
+         return i * rectHeight;
+    })
+    .attr("height",function(d){
+      console.log(d)
+         return linear(d);
+    })
+    .attr("width",rectHeight-2)
+    .attr("fill","steelblue")
+
+    // 定义坐标
+    var axis=d3.svg.axis()
+      .scale(linear)
+      .orient("top")
+      .ticks(7)
+      svg.append("g")
+      .attr("class","axis")
+      .attr("transform","translate(0,300)")
+      .call(axis);
+
+
+//工厂方法函数的原型中设置所有对象的构造函数
+UserFactory.prototype = {
+   SuperAdmin: function() {
+    this.name = "超级管理员",
+    this.viewPage = ['首页', '通讯录', '发现页', '应用数据', '权限管理']
+  },
+  Admin: function() {
+    this.name = "管理员",
+    this.viewPage = ['首页', '通讯录', '发现页', '应用数据']
+  },
+  NormalUser: function() {
+    this.name = '普通用户',
+    this.viewPage = ['首页', '通讯录', '发现页']
+  }
+}
+
+  </script>
+</body>
+</html>
